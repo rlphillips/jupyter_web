@@ -41,3 +41,12 @@ And open the resulting `index.html` in your browser to see the results.
 Here is what I get in my django website: 
 
 ![](blog_screenshot.png)
+
+## Automating notebook execution and rendering
+
+Inside a docker container of the jupyter/datascience-notebook image, run the container and run bash.
+
+* Mount the root directory of the repository onto /home/jovian/work before launching (docker run -v `pwd`:/home/jovyan/work/ -d -p 8888:8888 jupyter/datascience-notebook)
+* Execute bash inside the container (docker exec -it [containerId] bash)
+* Run launchAndRender.sh [notebookName]. The notebook will be expected atthe "notebooks" folder, and should be [notebookName].ipynb 
+* A [notebookName].html file will be output

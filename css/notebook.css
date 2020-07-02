@@ -559,3 +559,33 @@ div.output_javascript:empty {
 .th {
   text-center: left;
 }
+
+
+.dataframe tbody tr {
+    text-align: right;
+    vertical-align: middle;
+    padding: 0.5em 0.5em;
+    line-height: normal;
+    white-space: normal;
+    max-width: none;
+    border: none;
+}
+
+.dataframe  tr:nth-child(odd) td {
+    background-color: #f5f5f5;
+    /* font-weight: bold; */
+}
+
+.dataframe th {
+	text-align: right;
+    vertical-align: middle;
+    padding: 0.5em 0.5em;
+    line-height: normal;
+    white-space: normal;
+    max-width: none;
+    border: none;
+}
+
+.dataframe table {
+	border: none;
+}

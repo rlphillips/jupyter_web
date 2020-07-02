@@ -1,4 +1,5 @@
 import os
+import sys
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -15,8 +16,8 @@ env = Environment(
     loader = FileSystemLoader('templates'),
 )
 
-input_file = 'main.html'
-output_file = 'index.html'
+input_file = sys.argv[1]
+output_file = sys.argv[2]
 
 # reading the template
 template = env.get_template(input_file)
